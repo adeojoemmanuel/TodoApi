@@ -1,0 +1,111 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.userprefs
+
+# Mono auto-generated files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folders for IIS
+_IISExpress/
+.localhistory/
+
+# Visual Studio working files
+.vscode/
+.vs/
+*.log
+
+# Rider settings
+.idea/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Resharper settings
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# DotCover is a code coverage tool
+*.dotCover
+
+# NCrunch
+*.ncrunch*
+NCrunchTemp/
+
+# Compile and cache
+[Dd]ebug*/
+[Rr]elease*/
+x64/
+x86/
+[Aa][Rr][Mm]*/
+bld/
+[Bb]uild*/
+
+# NUnit
+*.VisualState.xml
+TestResult.xml
+
+# Web files
+.cshtml
+node_modules/
+
+# Database files
+*.mdf
+*.ldf
+*.ndf
+
+# Azure folder
+.azure/
+
+# JetBrains Rider
+.idea/
+
+# StyleCop
+*.StyleCop
+
+# Backup & report files
+*.bacpac
+*.dacpac
+*.rdl.data
+*.rptproj.user
+
+# File-based project
+project.lock.json
+project.fragment.lock.json
+
+# Python generated files (if used)
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Log files
+*.log
+
+# Logs from WebDav, Ionic, etc.
+*.[Ww]eb[Ii]nfo/
+
+# Others
+*.ipch
+*.obj
+*.pch
+*.ilk
+*.idb
+*.pdb
+*.sdf
+*.tmp
+*.vspscc
+*.vssscc
+*.vspx
+*.vsp
