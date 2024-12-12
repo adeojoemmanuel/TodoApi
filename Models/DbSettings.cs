@@ -1,9 +1,7 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace TodoAPI.Models
 {
     public class DbSettings
     {
-        public required string ConnectionString { get; set; }
+        public string ConnectionString { get; set; } = string.Empty;
     }
 }

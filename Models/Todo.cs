@@ -4,21 +4,21 @@ namespace TodoAPI.Models
 {
     public class Todo
     {
-        internal object? id;
-
         [Key]
         public Guid Id { get; set; }
-        public required string Title { get; set; }
-        public required string Description { get; set; }
-        public bool IsComplete { get; set; }
+
+        [Required]
+        public string Title { get; set; } = string.Empty;
+
+        [Required]
+        public string Description { get; set; } = string.Empty;
+
+        public bool IsComplete { get; set; } = false;
         public DateTime DueDate { get; set; }
         public int Priority { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-        public Todo()
-        {
-            IsComplete = false;
-        }
+        public Todo() { }
     }
 }

@@ -1,3 +1,4 @@
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using TodoAPI.Models;
@@ -20,7 +21,7 @@ namespace TodoAPI.AppDataContext
 
 
         // DbSet property to represent the Todo table
-         public required DbSet<Todo> Todos { get; set; }
+         public DbSet<Todo> Todos { get; set; }
 
          // Configuring the database provider and connection string
 
@@ -34,7 +35,7 @@ namespace TodoAPI.AppDataContext
          {
              modelBuilder.Entity<Todo>()
                  .ToTable("TodoAPI")
-                 .HasKey(x => x.id);
+                 .HasKey(x => x.Id);
          }
      }
 }

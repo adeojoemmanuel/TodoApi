@@ -9,21 +9,17 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
- // Add  This to in the Program.cs file
-builder.Services.Configure<DbSettings>(builder.Configuration.GetSection("DbSettings")); // Add this line
-builder.Services.AddSingleton<TodoDbContext>(); // Add this line
-
+builder.Services.Configure<DbSettings>(builder.Configuration.GetSection("DbSettings"));
+builder.Services.AddSingleton<TodoDbContext>();
 
 var app = builder.Build();
 
-// Add this line
-
 {
-    using var scope = app.Services.CreateScope(); // Add this line
-    var context = scope.ServiceProvider; // Add this line
+    using var scope = app.Services.CreateScope();
+    var context = scope.ServiceProvider;
 }
-
 
 if (app.Environment.IsDevelopment())
 {
@@ -32,7 +28,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseExceptionHandler();
+app.UseExceptionHandler("/Error");
+
 app.UseAuthorization();
 
 app.MapControllers();
